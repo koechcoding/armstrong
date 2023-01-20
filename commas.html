@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Sum of commas</title>
+</head>
+
+<body>
+  <h1>Enter any amount of numbers separated by a comma:</h1>
+  <input id="nums" type="text" required="required" />
+  <button onclick="sum()">Get sum</button>
+  <h3 id="sum"></h3>
+
+  <script lang="javascript">
+    function sum() {
+      sumofnums = 0;
+      nums = document.getElementById("nums").value.split(",");
+      for (i = 0; i < nums.length; i++) {
+        sumofnums += parseInt(nums[i]);
+      }
+      document.getElementById("sum").innerHTML = sumofnums;
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<body>
+			<br>
+			<h1>Checking if a number is Armstrong or not</h1>
+			Koech Wants You To Input A Number :<input type="text" name="n" id = "N"/>
+			<br/><br/>
+			<button onClick="Armstrong()">CHECK</button>
+		</body>
+		<script>
+			function Armstrong()
+			{
+				var flag,number,remainder,addition = 0;
+				number = Number(document.getElementById("N").value);
+
+				flag = number;
+				while(number > 0)
+				{
+					remainder = number%10;
+					addition = addition + remainder*remainder*remainder;
+					number = parseInt(number/10);
+				}
+
+				if(addition == flag)
+				{
+					window.alert("Koech says it is an Armstrong");
+				}
+				else
+				{
+					window.alert("Koech says it is not an Armstrong");
+				}
+			}
+		</script>
+	</head>
+</html>
+	
